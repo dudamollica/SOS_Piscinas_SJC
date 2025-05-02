@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre - SOS Piscinas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .titulo-pagina {
+      text-align: center;
+      background: linear-gradient(to right, #00b4d8, #0077b6);
+      padding: 60px 20px;
+      color: white;
+    }
+
+    .titulo-pagina h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .titulo-pagina p {
+      font-size: 1.3rem;
+      opacity: 0.9;
+    }
+
+    .conteudo-sobre {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+    }
+
+    .bloco-sobre {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .bloco-sobre:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .texto-sobre {
+      flex: 1 1 500px;
+    }
+
+    .texto-sobre h2 {
+      font-size: 2.2rem;
+      color: #16355d;
+      margin-bottom: 20px;
+    }
+
+    .texto-sobre p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    .imagem-sobre {
+      flex: 1 1 500px;
+      max-width: 500px;
+    }
+
+    .imagem-sobre img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      object-fit: cover;
+    }
+
+    /* Seção de valores especiais */
+    .valores {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .valor-item {
+      flex: 1 1 250px;
+      background: linear-gradient(to right, #00b4d8, #0077b6);
+      color: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .valor-item h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .valor-item p {
+      font-size: 1.2rem;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .bloco-sobre {
+        flex-direction: column;
+      }
+      .bloco-sobre:nth-child(even) {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<!-- BARRA TOPO -->
+<div class="barra-topo">
+  <div class="conteudo-barra">
+    <div class="info-contato">
+      <i data-lucide="phone"></i>
+      <a href="https://wa.me/5512991269395?text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20a%20limpeza%20da%20minha%20piscina." target="_blank">
+        <span>(12) 99126-9395</span>
+      </a>
+      <i data-lucide="phone"></i>
+      <a href="https://wa.me/5512997449395?text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20a%20limpeza%20da%20minha%20piscina." target="_blank">
+        <span>(12) 99744-9395</span>
+      </a>
+      <a href="https://www.instagram.com/sos.piscinas.sjc/" target="_blank" class="botao-instagram">
+        <i data-lucide="instagram"></i>
+        @sos.piscinas.sjc
+      </a>
+    </div>
+    <a class="botao-zap" href="https://wa.me/5512991269395?text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20a%20limpeza%20da%20minha%20piscina." target="_blank">
+      Solicitar Orçamento
+    </a>
+  </div>
+</div>
+
+<!-- BARRA MENU -->
+<div class="barra-menu">
+  <div class="conteudo-barra-menu">
+    <div class="logo">
+      <a href="index.html">
+        <img src="img/logo.png" alt="Logo SOS Piscinas">
+      </a>
+    </div>
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="clientes.html">Clientes</a>
+      <a href="contato.html">Contato</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="cuidados-piscina.html" class="botao-dicas">Cuidados com a Piscina</a>
+    </nav>
+  </div>
+</div>
+
+  <section class="titulo-pagina">
+    <h1>Sobre a SOS Piscinas</h1>
+  </section>
+
+  <section class="conteudo-sobre">
+
+    <div class="bloco-sobre">
+      <div class="texto-sobre">
+        <h2>Quem Somos</h2>
+        <p>Com mais de 24 anos de experiência, a SOS Piscinas é referência em serviços de limpeza e manutenção de piscinas em São José dos Campos. Nossos profissionais são altamente qualificados, garantindo um serviço de excelência para sua área de lazer.</p>
+      </div>
+      <div class="imagem-sobre">
+        <img src="img/piscineiro.png" alt="Equipe SOS Piscinas">
+      </div>
+    </div>
+
+    <div class="bloco-sobre">
+      <div class="texto-sobre">
+        <h2>Nossa Missão</h2>
+        <p>Proporcionar lazer com qualidade, segurança e cuidado. Nosso objetivo é que você possa aproveitar sua piscina ao máximo, sem preocupações, com a água sempre cristalina e própria para o uso.</p>
+      </div>
+      <div class="imagem-sobre">
+        <img src="img/limpando.png" alt="Missão da empresa">
+      </div>
+    </div>
+
+    <div class="bloco-sobre">
+      <div class="texto-sobre">
+        <h2>Parceria de Confiança: Hidrogás</h2>
+        <p>A SOS Piscinas tem o orgulho de ser parceira da Hidrogás, uma das mais respeitadas lojas de produtos para piscinas da região. 
+        Essa parceria reforça nosso compromisso com a qualidade, pois utilizamos apenas materiais e equipamentos de ponta em nossos serviços. 
+        Garantimos a você o melhor em soluções para a sua piscina, sempre com confiança e excelência!</p>
+      </div>
+      <div class="imagem-sobre">
+        <img src="img/hidrogas.png" alt="Parceria com Hidrogás">
+      </div>
+    </div>
+
+    <div class="valores">
+      <div class="valor-item">
+        <h3>Experiência</h3>
+        <p>Mais de duas décadas atendendo com excelência e carinho.</p>
+      </div>
+      <div class="valor-item">
+        <h3>Compromisso</h3>
+        <p>Trabalho sério, pontualidade e garantia de qualidade em todos os serviços.</p>
+      </div>
+      <div class="valor-item">
+        <h3>Inovação</h3>
+        <p>Equipamentos modernos e técnicas eficazes para sua piscina estar sempre perfeita.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- SEÇÃO CONTATO PELO WHATSAPP -->
+<section class="contato-whatsapp">
+  <div class="container-contato">
+    
+    <div class="info-contato" data-aos="fade-right">
+      <h2>Fale Conosco pelo WhatsApp</h2>
+      <p>Precisa de ajuda rápida ou quer solicitar um orçamento? Estamos disponíveis para te atender!</p>
+      <ul>
+        <li><i data-lucide="phone"></i> (12) 99126-9395</li>
+        <li><i data-lucide="phone"></i> (12) 99744-9395</li>
+      </ul>
+    </div>
+
+    <div class="formulario-contato" data-aos="fade-up">
+      <a class="botao-zap-direto" href="https://wa.me/5512991269395?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20a%20limpeza%20da%20minha%20piscina." target="_blank">
+        <i data-lucide="message-circle"></i> Conversar no WhatsApp
+      </a>
+    </div>
+
+    <div class="foto-contato" data-aos="fade-left">
+      <img src="img/casa-maquinas.png" alt="Atendimento via WhatsApp">
+    </div>
+
+  </div>
+</section>
+
+<!-- SEÇÃO CONTATO COMPLETO -->
+<section class="contato-completo">
+<div class="container-contato">
+  <div class="info-contato" data-aos="fade-right">
+    <h2>Entre em contato por e-mail</h2>
+    <p>Estamos prontos para cuidar da sua piscina com qualidade e agilidade.</p>
+    <ul>
+      <li><i data-lucide="phone"></i> (12) 99744-9395</li>
+      <li><i data-lucide="mail"></i> ricardorenno@sospiscinasjc.com.br</li>
+      <li><i data-lucide="instagram"></i> @sos.piscinas.sjc</li>
+    </ul>
+  </div>
+
+  <form class="formulario-contato" data-aos="fade-up" form action="https://formsubmit.co/ricardorenno@sospiscinasjc.com.br" method="POST">
+    <input type="text" name="name" placeholder="Seu Nome" required>
+    <input type="email" name="email" placeholder="Seu E-mail" required>
+    <input type="text" name="phone" placeholder="Seu Telefone" required>
+    <textarea name="message" placeholder="Sua Mensagem" rows="5" required></textarea>
+
+    <!-- Proteções e configurações extras -->
+    <input type="hidden" name="_captcha" value="false"> <!-- remove captcha -->
+    <input type="hidden" name="_next" value="https://seusite.com/obrigado.html"> <!-- redireciona para página de obrigado depois de enviar -->
+
+    <button type="submit" class="botao-enviar">Enviar Mensagem</button>
+  </form>
+
+  <div class="foto-contato" data-aos="fade-left">
+    <img src="img/parametros.png" alt="Equipe SOS Piscinas">
+  </div>
+</div>
+</section>
+
+<!-- RODAPÉ -->
+<footer class="rodape">
+<div class="container-rodape">
+  <p>&copy; 2025 SOS Piscinas - Todos os direitos reservados.</p>
+  <div class="redes-sociais">
+    <a href="https://www.instagram.com/sos.piscinas.sjc/" target="_blank">
+      <i data-lucide="instagram"></i>
+    </a>
+    <a href="tel:+5512997449395">
+      <i data-lucide="phone"></i>
+    </a>
+  </div>
+</div>
+</footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="script.js"></script>
+
+</body>
+</html>

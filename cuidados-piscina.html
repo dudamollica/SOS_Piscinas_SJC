@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidados com a Piscina</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Fontes e cores globais */
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h2,
+        h3 {
+            color: #16355d;
+        }
+
+        .titulo-pagina {
+            text-align: center;
+            background: linear-gradient(to right, #00b4d8, #0077b6);
+            padding: 30px 0px;
+            color: white;
+        }
+
+        .titulo-pagina h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .conteudo {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 20px;
+        }
+
+        .menu-assuntos {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .menu-assuntos a {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            color: #16355d;
+            background: white;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .menu-assuntos a:hover {
+            background: #0077b6;
+            color: white;
+        }
+
+        .bloco-sobre {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding-top: 50px;
+        }
+
+        .bloco-sobre:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .texto-sobre {
+            flex: 1 1 500px;
+        }
+
+        .texto-sobre h2 {
+            font-size: 2.2rem;
+            color: #16355d;
+            margin-bottom: 20px;
+        }
+
+        .texto-sobre p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .imagem-sobre {
+            flex: 1 1 500px;
+            max-width: 500px;
+        }
+
+        .imagem-sobre img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            object-fit: cover;
+        }
+
+        /* Degrade em algumas seções */
+        .secao-degrade {
+            background: linear-gradient(135deg, #00b4d8, #0077b6);
+            color: white;
+            padding: 50px 20px;
+        }
+
+        .secao-degrade h3,
+        .secao-degrade p {
+            color: white;
+        }
+
+        /* Imagem de fundo */
+        .secao-background {
+            background-image: url('img/piscina-background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 20px;
+        }
+
+        .secao-background h3,
+        .secao-background p {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .menu-assuntos {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .secao {
+                padding: 15px;
+            }
+
+            .secao-direita,
+            .secao-esquerda {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- BARRA TOPO -->
+    <div class="barra-topo">
+        <div class="conteudo-barra">
+            <div class="info-contato">
+                <i data-lucide="phone"></i>
+                <a href="https://wa.me/5512991269395?text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20a%20limpeza%20da%20minha%20piscina."
+                    target="_blank">
+                    <span>(12) 99126-9395</span>
+                </a>
+                <i data-lucide="phone"></i>
+                <a href="https://wa.me/5512997449395?text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20a%20limpeza%20da%20minha%20piscina."
+                    target="_blank">
+                    <span>(12) 99744-9395</span>
+                </a>
+                <a href="https://www.instagram.com/sos.piscinas.sjc/" target="_blank" class="botao-instagram">
+                    <i data-lucide="instagram"></i>
+                    @sos.piscinas.sjc
+                </a>
+            </div>
+            <a class="botao-zap"
+                href="https://wa.me/5512991269395?text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20a%20limpeza%20da%20minha%20piscina."
+                target="_blank">
+                Solicitar Orçamento
+            </a>
+        </div>
+    </div>
+    <!-- BARRA MENU -->
+    <div class="barra-menu">
+        <div class="conteudo-barra-menu">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Logo SOS Piscinas">
+                </a>
+            </div>
+            <nav class="menu">
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="clientes.html">Clientes</a>
+                <a href="contato.html">Contato</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="cuidados-piscina.html" class="botao-dicas">Cuidados com a Piscina</a>
+            </nav>
+        </div>
+    </div>
+
+    <section class="titulo-pagina">
+        <h1>Dicas úteis para manter sua piscina sempre perfeita:</h1>
+    </section>
+
+    <section class="conteudo">
+        <div class="menu-assuntos">
+            <a href="#assunto1">1 - Areia do Filtro Saturada</a>
+            <a href="#assunto2">2 - Crianças e Piscina</a>
+            <a href="#assunto3">3 - Cloro Estabilizado</a>
+            <a href="#assunto4">4 - Cuidados Ao Redor</a>
+            <a href="#assunto5">5 - Importância da Ducha</a>
+            <a href="#assunto6">6 - Nível da Água</a>
+            <a href="#assunto7">7 - Piscina Aquecida</a>
+            <a href="#assunto8">8 - Queimadas</a>
+        </div>
+
+        <section class="conteudo-sobre">
+            <div id="assunto1" class="bloco-sobre">
+                <div class="texto-sobre">
+                    <h2>Areia do Filtro Saturada</h2>
+                    <p>
+                        A areia do filtro de piscina pode ficar saturada com o tempo, perdendo a capacidade de filtrar a
+                        água de maneira eficiente. Isso acontece quando a areia acumula muitas impurezas e resíduos,
+                        ficando compactada. As causas mais comuns são a falta de retro-lavagem adequada, uso prolongado
+                        sem manutenção e pressão alta no filtro.
+
+                        Para resolver, a solução mais eficaz é substituir a areia, que deve ser trocada a cada 2-3 anos.
+                        Também é essencial verificar a pressão do filtro e realizar o backwash corretamente. A
+                        manutenção regular do sistema de filtragem ajuda a evitar a saturação e garante água limpa e
+                        cristalina.
+                    </p>
+                </div>
+                <div class="imagem-sobre">
+                    <img src="img/areia.png" alt="Areia do Filtro Saturada">
+                </div>
+            </div>
+
+            <div id="assunto2" class="bloco-sobre">
+                <div class="texto-sobre">
+                    <h2>Crianças e Piscina</h2>
+                    <p>Para garantir segurança, use fraldas especiais para água e molhe a criança aos poucos antes de
+                        entrar na piscina. Evite sustos: mantenha a calma se o bebê afundar ou engolir água. Não use
+                        algodão nos ouvidos; tampões só são indicados em casos de otite crônica, e apenas após os cinco
+                        anos. Após refeições, é preciso aguardar duas horas antes de voltar à água. Crianças devem ser
+                        supervisionadas de perto até os nove anos. Aulas particulares são recomendadas apenas a partir
+                        dos 12 anos, para que o contato social nas aulas em grupo não seja perdido. </br>
+                        Mesmo sem professor, atividades recreativas ajudam na adaptação. Aos seis meses, brinque de
+                        fazer bolhas, cantar e bater palmas na água. Aos dois anos, a criança já caminha sozinha na água
+                        rasa e pode usar espaguetes de natação para se apoiar. Aos três anos, ganha mais confiança,
+                        brinca em grupo e já pode iniciar aulas de natação, focando em respiração e movimentos básicos.
+                        Aos seis anos, com a coordenação motora desenvolvida, aprende estilos de nado, seguindo a ordem
+                        clássica: crawl, costas, peito e borboleta.</br>
+                        Com carinho e atenção, a piscina se torna um ambiente seguro e cheio de bons momentos para pais
+                        e filhos.</p>
+                </div>
+                <div class="imagem-sobre">
+                    <img src="img/criança.png" alt="Crianças e Piscina">
+                </div>
+            </div>
+
+            <div id="assunto3" class="bloco-sobre">
+                <div class="texto-sobre">
+                    <h2>Cloro Estabilizado</h2>
+                    <p>
+                        Ao comprar cloro para a manutenção da piscina, é importante verificar se o produto é cloro
+                        comum, estabilizado ou dicloro. O cloro estabilizado e o dicloro, apesar de serem mais baratos e
+                        durarem mais tempo na água, contêm ácido cianúrico em sua fórmula — uma substância que se
+                        acumula com o uso contínuo.
+
+                        Em pouco tempo, o excesso de ácido cianúrico provoca um fenômeno chamado superestabilização, que
+                        deixa a água esverdeada. Mesmo que os parâmetros de pH, cloro e alcalinidade estejam
+                        aparentemente corretos na análise, a água não volta à condição ideal.
+
+                        A única solução nesses casos é descartar de 50% a 60% da água da piscina e repô-la com água nova
+                        (de preferência da Sabesp) para reduzir o nível de ácido cianúrico.
+
+                        Por isso, recomendamos que utilizem apenas cloro comum, evitando assim problemas futuros com a
+                        qualidade da água.
+                    </p>
+                </div>
+                <div class="imagem-sobre">
+                    <img src="img/dicloro.png" alt="Cloro Estabilizado">
+                </div>
+            </div>
+
+            <div id="assunto4" class="bloco-sobre">
+                <div class="texto-sobre">
+                    <h2>Cuidados Ao Redor da Piscina</h2>
+                    <p>Manter o entorno da piscina limpo e bem cuidado é essencial para garantir a qualidade da água e a
+                        segurança dos usuários. Produtos de limpeza domésticos como detergentes, desinfetantes e sabões
+                        comuns não devem ser usados nas bordas ou pisos ao redor da piscina, pois podem causar espuma,
+                        alterar o pH da água e provocar irritações na pele. Sempre utilize produtos específicos para
+                        áreas de piscina ou apenas água e escova apropriada. </br>
+
+                        Outro cuidado importante é evitar a circulação de animais de estimação ao redor da piscina. Além
+                        de trazerem pelos, sujeira e possíveis contaminantes para a água, animais podem danificar o
+                        revestimento ou os equipamentos. Mantenha a área sempre fechada ou supervisionada.</br>
+
+                        Também é fundamental não consumir alimentos ou bebidas na borda da piscina, para evitar
+                        acidentes e contaminações. Bebidas derramadas ou restos de comida atraem insetos e dificultam a
+                        manutenção da limpeza.</br>
+
+                        Seguindo esses cuidados simples, é possível prolongar a vida útil dos equipamentos, manter a
+                        água sempre limpa e garantir mais segurança e conforto para todos.
+                    </p>
+                </div>
+                <div class="imagem-sobre">
+                    <img src="img/redor.jpg" alt="Cuidados Ao Redor da Piscina">
+                </div>
+            </div>
+
+            <div id="assunto5" class="bloco-sobre">
+                <div class="texto-sobre">
+                    <h2>Importância da Ducha</h2>
+                    <p>
+                        Recomendamos que todos os usuários tomem uma ducha antes de entrar na piscina. Essa prática
+                        ajuda a remover o excesso de suor, óleos corporais, protetores solares e outros produtos usados
+                        na pele. Essas substâncias, quando entram em contato com a água, tendem a flutuar e se depositar
+                        nas bordas da piscina, formando uma camada de sujeira grossa e difícil de remover.</br>
+
+                        Para verificar se a borda foi limpa durante a manutenção, basta molhar a ponta do dedo e
+                        esfregar levemente sobre a área suja. Se a sujeira sair com facilidade, significa que a borda
+                        foi higienizada corretamente.</br>
+
+                        Manter esse cuidado simples contribui para a preservação da qualidade da água e para a beleza da
+                        sua piscina.
+                    </p>
+                </div>
+                <div class="imagem-sobre">
+                    <img src="img/ducha.jpg" alt="Importância da Ducha">
+                </div>
+            </div>
+
+            <div id="assunto6" class="bloco-sobre">
+                <div class="texto-sobre">
+                    <h2>Nível de Água da Piscina</h2>
+                    <p>
+                        Manter o nível da água da piscina dentro do ideal é fundamental para o bom funcionamento do
+                        sistema de filtragem. Se a água ficar abaixo do nível dos skimmers (ralo da borda), a bomba pode
+                        puxar ar, forçando o motor e causando danos sérios. Já se a água estiver muito acima, o skimmer
+                        perde eficiência na coleta de sujeiras da superfície. O ideal é que o nível esteja sempre na
+                        metade da abertura do skimmer. Conferir o nível regularmente evita prejuízos e mantém a água
+                        sempre limpa.
+                    </p>
+                </div>
+                <div class="imagem-sobre">
+                    <img src="img/nivel.jpg" alt="Nível de Água da Piscina">
+                </div>
+            </div>
+
+            <div id="assunto7" class="bloco-sobre">
+                <div class="texto-sobre">
+                    <h2>Piscina Aquecida</h2>
+                    <p>Em piscinas aquecidas, a evaporação do cloro é maior devido à alta temperatura da água. A falta
+                        de uma capa térmica agrava ainda mais essa perda, dificultando a manutenção do teor ideal de
+                        cloro.
+
+                        Para resolver esse problema, o ideal é instalar um reservatório de pastilhas de cloro no retorno
+                        da casa de máquinas. Assim, sempre que a bomba ligar automaticamente pelo timer, o cloro será
+                        dosado de forma contínua na água.
+                        Importante: não recomendamos o uso de flutuadores de cloro com capa térmica, pois o cloro
+                        concentrado pode danificar o material da capa.
+
+                        Outro ponto importante: durante a aspiração, é necessário desligar a bomba do aquecimento.
+                        Se a bomba do aquecimento estiver ligada, ela succiona a água pelo mesmo encanamento da
+                        aspiração, fazendo com que parte da sujeira aspirada volte para a piscina. Isso pode deixar a
+                        água turva ou com sujeira no fundo, mesmo após a limpeza.
+
+                        Seguindo essas orientações, você mantém sua piscina aquecida sempre limpa, bem tratada e
+                        protegida!</p>
+                </div>
+                <div class="imagem-sobre">
+                    <img src="img/aquecida.jpg" alt="Piscina Aquecida">
+                </div>
+            </div>
+
+            <div id="assunto8" class="bloco-sobre">
+                <div class="texto-sobre">
+                    <h2>Queimadas</h2>
+                    <p>
+                        Queimadas em áreas próximas provocam a queda de fuligem, cinzas e poeira na piscina, deixando a
+                        água suja, turva e prejudicando o equilíbrio químico. Durante esses períodos, é importante
+                        manter a piscina coberta sempre que possível para reduzir a entrada de sujeira. Se a fuligem já
+                        estiver na água, é recomendado aspirar o fundo no modo "drenar", evitando que as partículas
+                        leves retornem para a piscina através do filtro. Também é necessário reforçar a filtragem,
+                        corrigir o pH e garantir a presença de cloro livre suficiente para combater impurezas invisíveis
+                        trazidas pelo ar. Em casos mais graves, pode ser feita uma supercloração para restaurar a
+                        qualidade da água. A ação rápida é essencial para proteger a piscina e manter a água sempre
+                        cristalina.
+                    </p>
+                </div>
+                <div class="imagem-sobre">
+                    <img src="img/queimadas.png" alt="Queimadas">
+                </div>
+            </div>
+
+        </section>
+    </section>
+    <!-- SEÇÃO CONTATO PELO WHATSAPP -->
+    <section class="contato-whatsapp">
+        <div class="container-contato">
+
+            <div class="info-contato" data-aos="fade-right">
+                <h2>Fale Conosco pelo WhatsApp</h2>
+                <p>Precisa de ajuda rápida ou quer solicitar um orçamento? Estamos disponíveis para te atender!</p>
+                <ul>
+                    <li><i data-lucide="phone"></i> (12) 99126-9395</li>
+                    <li><i data-lucide="phone"></i> (12) 99744-9395</li>
+                </ul>
+            </div>
+
+            <div class="formulario-contato" data-aos="fade-up">
+                <a class="botao-zap-direto"
+                    href="https://wa.me/5512991269395?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20a%20limpeza%20da%20minha%20piscina."
+                    target="_blank">
+                    <i data-lucide="message-circle"></i> Conversar no WhatsApp
+                </a>
+            </div>
+
+            <div class="foto-contato" data-aos="fade-left">
+                <img src="img/casa-maquinas.png" alt="Atendimento via WhatsApp">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SEÇÃO CONTATO COMPLETO -->
+    <section class="contato-completo">
+        <div class="container-contato">
+            <div class="info-contato" data-aos="fade-right">
+                <h2>Entre em contato</h2>
+                <p>Estamos prontos para cuidar da sua piscina com qualidade e agilidade.</p>
+                <ul>
+                    <li><i data-lucide="phone"></i> (12) 99744-9395</li>
+                    <li><i data-lucide="mail"></i> ricardorenno@sospiscinasjc.com.br</li>
+                    <li><i data-lucide="instagram"></i> @sos.piscinas.sjc</li>
+                </ul>
+            </div>
+
+            <form class="formulario-contato" data-aos="fade-up" form
+                action="https://formsubmit.co/ricardorenno@sospiscinasjc.com.br" method="POST">
+                <input type="text" name="name" placeholder="Seu Nome" required>
+                <input type="email" name="email" placeholder="Seu E-mail" required>
+                <input type="text" name="phone" placeholder="Seu Telefone" required>
+                <textarea name="message" placeholder="Sua Mensagem" rows="5" required></textarea>
+
+                <!-- Proteções e configurações extras -->
+                <input type="hidden" name="_captcha" value="false"> <!-- remove captcha -->
+                <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+                <!-- redireciona para página de obrigado depois de enviar -->
+
+                <button type="submit" class="botao-enviar">Enviar Mensagem</button>
+            </form>
+
+            <div class="foto-contato" data-aos="fade-left">
+                <img src="img/parametros.png" alt="Equipe SOS Piscinas">
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="container-rodape">
+            <p>&copy; 2025 SOS Piscinas - Todos os direitos reservados.</p>
+            <div class="redes-sociais">
+                <a href="https://www.instagram.com/sos.piscinas.sjc/" target="_blank">
+                    <i data-lucide="instagram"></i>
+                </a>
+                <a href="tel:+5512997449395">
+                    <i data-lucide="phone"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria - SOS Piscinas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Fontes e cores globais */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .titulo-pagina {
+      text-align: center;
+      background: linear-gradient(to right, #00b4d8, #0077b6);
+      padding: 50px 0;
+      color: white;
+    }
+
+    .titulo-pagina h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    .titulo-pagina p {
+      font-size: 1.2rem;
+    }
+
+    .conteudo-galeria {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .item-galeria {
+      position: relative;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .item-galeria:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .item-galeria img, .item-galeria video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .item-galeria .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: 10px;
+    }
+
+    .item-galeria:hover .overlay {
+      opacity: 1;
+    }
+
+    .overlay h4 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .overlay a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      margin-top: 10px;
+      background: #00b4d8;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .overlay a:hover {
+      background: #0077b6;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .titulo-pagina h1 {
+        font-size: 2rem;
+      }
+      .titulo-pagina p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- BARRA TOPO -->
+<div class="barra-topo">
+    <div class="conteudo-barra">
+      <div class="info-contato">
+        <i data-lucide="phone"></i>
+        <a href="https://wa.me/5512991269395?text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20a%20limpeza%20da%20minha%20piscina." target="_blank">
+          <span>(12) 99126-9395</span>
+        </a>
+        <i data-lucide="phone"></i>
+        <a href="https://wa.me/5512997449395?text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20a%20limpeza%20da%20minha%20piscina." target="_blank">
+          <span>(12) 99744-9395</span>
+        </a>
+        <a href="https://www.instagram.com/sos.piscinas.sjc/" target="_blank" class="botao-instagram">
+          <i data-lucide="instagram"></i>
+          @sos.piscinas.sjc
+        </a>
+      </div>
+      <a class="botao-zap" href="https://wa.me/5512991269395?text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20a%20limpeza%20da%20minha%20piscina." target="_blank">
+        Solicitar Orçamento
+      </a>
+    </div>
+  </div>
+  <!-- BARRA MENU -->
+  <div class="barra-menu">
+    <div class="conteudo-barra-menu">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="Logo SOS Piscinas">
+        </a>
+      </div>
+      <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="contato.html">Contato</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="cuidados-piscina.html" class="botao-dicas">Cuidados com a Piscina</a>
+      </nav>
+    </div>
+  </div>
+
+  <section class="titulo-pagina">
+    <h1>Galeria de Trabalhos</h1>
+    <p>Veja alguns dos nossos trabalhos realizados em diversas piscinas. Fotos e vídeos de antes e depois, limpeza e manutenção.</p>
+  </section>
+
+  <section class="conteudo-galeria">
+    <div class="galeria-grid">
+      
+      <!-- Item de galeria 1 - Foto -->
+      <div class="item-galeria">
+        <img src="img/trabalho1.jpg" alt="Trabalho SOS Piscinas 1">
+        <div class="overlay">
+          <h4>Trabalho de Limpeza Completa</h4>
+          <a href="img/trabalho1.jpg" target="_blank">Ver Detalhes</a>
+        </div>
+      </div>
+
+      <!-- Item de galeria 2 - Video -->
+      <div class="item-galeria">
+        <video controls>
+          <source src="video/trabalho1.mp4" type="video/mp4">
+          Seu navegador não suporta vídeos.
+        </video>
+        <div class="overlay">
+          <h4>Manutenção e Filtragem</h4>
+          <a href="video/trabalho1.mp4" target="_blank">Ver Vídeo</a>
+        </div>
+      </div>
+
+      <!-- Item de galeria 3 - Foto -->
+      <div class="item-galeria">
+        <img src="img/trabalho2.jpg" alt="Trabalho SOS Piscinas 2">
+        <div class="overlay">
+          <h4>Limpeza Pós-Chuva</h4>
+          <a href="img/trabalho2.jpg" target="_blank">Ver Detalhes</a>
+        </div>
+      </div>
+
+      <!-- Item de galeria 4 - Video -->
+      <div class="item-galeria">
+        <video controls>
+          <source src="video/trabalho2.mp4" type="video/mp4">
+          Seu navegador não suporta vídeos.
+        </video>
+        <div class="overlay">
+          <h4>Processo de Limpeza e Manutenção</h4>
+          <a href="video/trabalho2.mp4" target="_blank">Ver Vídeo</a>
+        </div>
+      </div>
+
+      <!-- Item de galeria 5 - Foto -->
+      <div class="item-galeria">
+        <img src="img/trabalho3.jpg" alt="Trabalho SOS Piscinas 3">
+        <div class="overlay">
+          <h4>Antes e Depois da Limpeza</h4>
+          <a href="img/trabalho3.jpg" target="_blank">Ver Detalhes</a>
+        </div>
+      </div>
+
+      <!-- Item de galeria 6 - Video -->
+      <div class="item-galeria">
+        <video controls>
+          <source src="video/trabalho3.mp4" type="video/mp4">
+          Seu navegador não suporta vídeos.
+        </video>
+        <div class="overlay">
+          <h4>Reparo e Manutenção Profunda</h4>
+          <a href="video/trabalho3.mp4" target="_blank">Ver Vídeo</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
