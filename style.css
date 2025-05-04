@@ -5,9 +5,14 @@
   box-sizing: border-box;
 }
 
+html,
 body {
+  width: 100%;
+  overflow-x: hidden;
+  /* Evita rolagem lateral */
   font-family: 'Poppins', sans-serif;
 }
+
 
 .barra-topo {
   background-color: #0cc0df;
@@ -20,7 +25,7 @@ body {
   color: white;
 }
 
-.barra-topo a :hover{
+.barra-topo a :hover {
   color: #16355d;
 }
 
@@ -38,6 +43,14 @@ body {
   align-items: center;
   gap: 10px;
   font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.info-contato div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
@@ -83,11 +96,43 @@ body {
   color: white !important;
 }
 
+@media (max-width: 768px) {
+  .conteudo-barra {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .info-contato {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .info-contato div {
+    display: none;
+  }
+
+  .botao-instagram {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+
+  .botao-zap {
+    display: none;
+    align-self: stretch;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
 .barra-menu {
   background-color: #ffffff;
   display: flex;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* sombra leve */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /* sombra leve */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -126,22 +171,92 @@ body {
   background-color: #16355d;
   color: #ffffff;
 }
+
+
 /* Estilo específico para o botão Dicas */
 .botao-dicas {
-  background-color: #0cc0df; /* Cor de fundo diferente para o botão */
+  background-color: #0cc0df;
+  /* Cor de fundo diferente para o botão */
   padding: 10px 25px;
   border-radius: 8px;
   font-size: 22px;
   font-weight: 700;
   color: white !important;
   transition: background-color 0.3s, transform 0.3s;
-  margin-left: 30px; /* Espaço entre os itens */
+  margin-left: 30px;
+  /* Espaço entre os itens */
 }
 
 .botao-dicas:hover {
   background-color: #16355d;
-  transform: scale(1.05); /* Pequeno efeito de zoom */
+  transform: scale(1.05);
+  /* Pequeno efeito de zoom */
 }
+
+.hamburger {
+  display: none;
+  font-size: 32px;
+  background: none;
+  border: none;
+  color: #16355d;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .conteudo-barra-menu {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px 20px;
+  }
+
+  /* 🔧 Alinhar logo e ícone na mesma linha */
+  .topo-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo img {
+    height: 70px;
+    width: auto;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 32px;
+    background: none;
+    border: none;
+    color: #16355d;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu a,
+  .botao-dicas {
+    font-size: 18px;
+    padding: 10px 15px;
+    width: 100%;
+  }
+
+  .botao-dicas {
+    font-size: 18px;
+    margin-left: 0;
+  }
+}
+
 
 .banner {
   position: relative;
@@ -199,16 +314,19 @@ body {
 }
 
 .slogan-banner {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  margin-top: 12px;
-  background-color: white;
-  padding: 6px 12px;
-  border-radius: 8px;
-  color: black;
+  margin-top: 16px;
+  background-color: rgba(255, 255, 255, 0.85); /* Fundo branco com leve transparência */
+  padding: 12px 20px;
+  border-radius: 12px;
+  color: #222; /* Texto escuro para contraste */
   display: inline-block;
-  line-height: 1.4;
-  width: fit-content;
+  line-height: 1.5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra para destacar do fundo */
+  backdrop-filter: blur(4px); /* Suaviza o fundo da água */
+  -webkit-backdrop-filter: blur(4px); /* Para compatibilidade com Safari */
+  transition: 0.3s ease;
 }
 
 .botao-orcamento {
@@ -238,9 +356,11 @@ body {
     transform: translateX(100vw);
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     transform: translateX(-60px);
     opacity: 1;
@@ -252,12 +372,100 @@ body {
     transform: translateX(-100vw);
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     transform: translateX(60px);
     opacity: 1;
+  }
+}
+
+/* Banner Mobile */
+.banner-mobile {
+  display: none;
+  background-image: url('img/piscina.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.imagem-banner-mobile {
+  width: 80%;
+  max-width: 250px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+}
+
+.imagem-banner-mobile img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.botao-orcamento-mobile:hover {
+  background-color: #16355d;
+}
+
+/* Media Queries para esconder/mostrar os banners */
+@media (max-width: 768px) {
+
+  /* Exibe o banner para celular e esconde o banner desktop */
+  .banner {
+    display: none;
+  }
+
+  .banner-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .texto-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 16px; /* garante espaçamento lateral sem empurrar */
+    text-align: center;
+    animation: none !important;
+    opacity: 1;
+    transform: none !important;
+  }
+
+  .texto-banner h1 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  }
+
+  .texto-banner p {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  }
+
+  .botao-orcamento {
+    padding: 14px 28px;
+    margin: 20px auto;
   }
 }
 
@@ -282,8 +490,10 @@ body {
 
 .cards-diferenciais {
   display: flex;
-  flex-wrap: wrap; /* Quebra para nova linha se precisar */
-  justify-content: center; /* Centraliza os cards */
+  flex-wrap: wrap;
+  /* Quebra para nova linha se precisar */
+  justify-content: center;
+  /* Centraliza os cards */
   gap: 30px;
   padding-bottom: 10px;
 }
@@ -292,14 +502,14 @@ body {
   background-color: white;
   padding: 30px 20px;
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   width: 300px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-diferencial:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .card-diferencial i {
@@ -348,8 +558,10 @@ body {
 
 .cards-servicos {
   display: flex;
-  flex-wrap: wrap; /* Quebra se precisar */
-  justify-content: center; /* Centraliza os cards */
+  flex-wrap: wrap;
+  /* Quebra se precisar */
+  justify-content: center;
+  /* Centraliza os cards */
   gap: 30px;
   padding-bottom: 10px;
 }
@@ -456,13 +668,16 @@ body {
 }
 
 .depoimentos-wrapper {
-  overflow-x: auto; /* Permite rolagem se necessário */
+  overflow-x: auto;
+  /* Permite rolagem se necessário */
 }
 
 .depoimentos-container {
   display: flex;
-  flex-wrap: wrap; /* Permite quebrar linha */
-  justify-content: center; /* Centraliza os depoimentos */
+  flex-wrap: wrap;
+  /* Permite quebrar linha */
+  justify-content: center;
+  /* Centraliza os depoimentos */
   gap: 30px;
   padding-bottom: 10px;
 }
@@ -682,20 +897,10 @@ body {
   max-width: 100%;
   height: auto;
   border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   object-fit: cover;
 }
 
-/* Responsivo */
-@media (max-width: 992px) {
-  .container-contato {
-    flex-direction: column;
-  }
-
-  .foto-contato {
-    margin-top: 30px;
-  }
-}
 
 /* RODAPÉ */
 .rodape {
@@ -728,7 +933,8 @@ body {
 /* SEÇÃO CONTATO WHATSAPP */
 .contato-whatsapp {
   padding: 60px 20px;
-  background: linear-gradient(135deg, #25D366, #128C7E); /* Verde degradê bonito */
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  /* Verde degradê bonito */
   color: white;
 }
 
@@ -800,8 +1006,8 @@ body {
 }
 
 .botao-zap-direto svg {
-  width: 48px ;
-  height: 36px ;
+  width: 48px;
+  height: 36px;
 }
 
 .botao-zap-direto:hover {
@@ -816,4 +1022,44 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+  .container-contato {
+    flex-direction: column;
+  }
+
+  .contato-whatsapp {
+    flex-direction: column;
+  }
+
+  .foto-contato {
+    margin-top: 30px;
+  }
+
+  .contato-whatsapp .container-contato {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contato-whatsapp .info-contato h2 {
+    font-size: 28px;
+  }
+
+  .contato-whatsapp .info-contato p,
+  .contato-whatsapp ul li {
+    font-size: 16px;
+  }
+
+  .botao-zap-direto {
+    font-size: 18px;
+    padding: 14px 30px;
+    max-width: 100%;
+  }
+
+  .foto-contato img {
+    max-width: 100%;
+    height: auto;
+  }
 }

@@ -150,12 +150,17 @@
 <!-- BARRA MENU -->
 <div class="barra-menu">
   <div class="conteudo-barra-menu">
-    <div class="logo">
-      <a href="index.html">
-        <img src="img/logo.png" alt="Logo SOS Piscinas">
-      </a>
+    <div class="topo-menu">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="Logo SOS Piscinas">
+        </a>
+      </div>
+
+      <button class="hamburger" id="hamburger">☰</button>
     </div>
-    <nav class="menu">
+
+    <nav class="menu" id="menu">
       <a href="index.html">Início</a>
       <a href="sobre.html">Sobre</a>
       <a href="clientes.html">Clientes</a>
@@ -298,6 +303,15 @@
     lucide.createIcons();
   </script>
   <script src="script.js"></script>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const menu = document.getElementById("menu");
+  
+    hamburger.addEventListener("click", () => {
+      menu.classList.toggle("show");
+    });
+  </script>
 
 </body>
 </html>

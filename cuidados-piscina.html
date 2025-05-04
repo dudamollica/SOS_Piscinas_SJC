@@ -182,24 +182,30 @@
             </a>
         </div>
     </div>
+
     <!-- BARRA MENU -->
-    <div class="barra-menu">
-        <div class="conteudo-barra-menu">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="img/logo.png" alt="Logo SOS Piscinas">
-                </a>
-            </div>
-            <nav class="menu">
-                <a href="index.html">Início</a>
-                <a href="sobre.html">Sobre</a>
-                <a href="clientes.html">Clientes</a>
-                <a href="contato.html">Contato</a>
-                <a href="galeria.html">Galeria</a>
-                <a href="cuidados-piscina.html" class="botao-dicas">Cuidados com a Piscina</a>
-            </nav>
+<div class="barra-menu">
+    <div class="conteudo-barra-menu">
+      <div class="topo-menu">
+        <div class="logo">
+          <a href="index.html">
+            <img src="img/logo.png" alt="Logo SOS Piscinas">
+          </a>
         </div>
+  
+        <button class="hamburger" id="hamburger">☰</button>
+      </div>
+  
+      <nav class="menu" id="menu">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="contato.html">Contato</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="cuidados-piscina.html" class="botao-dicas">Cuidados com a Piscina</a>
+      </nav>
     </div>
+  </div>
 
     <section class="titulo-pagina">
         <h1>Dicas úteis para manter sua piscina sempre perfeita:</h1>
@@ -481,6 +487,16 @@
         lucide.createIcons();
     </script>
     <script src="script.js"></script>
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const menu = document.getElementById("menu");
+      
+        hamburger.addEventListener("click", () => {
+          menu.classList.toggle("show");
+        });
+      </script>
+
 </body>
 
 </html>
