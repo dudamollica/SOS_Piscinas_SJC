@@ -128,14 +128,13 @@ body {
 }
 
 .barra-menu {
-  background-color: #ffffff;
   display: flex;
   justify-content: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  /* sombra leve */
   position: sticky;
   top: 0;
   z-index: 1000;
+  background-color: white;
 }
 
 .conteudo-barra-menu {
@@ -464,7 +463,7 @@ body {
   }
 
   .botao-orcamento {
-    padding: 14px 28px;
+    height: 80px;
     margin: 20px auto;
   }
 }
